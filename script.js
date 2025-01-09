@@ -9,19 +9,16 @@ function validateForm() {
     message.textContent = "All fields are required!";
     return;
     }
-    
     const phonePattern = /^[0-9]{10}$/;
     if (!phonePattern.test(phone)) {
     message.textContent = "Enter a valid 10-digit phone number.";
     return;
     }
-    
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (!emailPattern.test(email)) {
     message.textContent = "Enter a valid email address.";
     return;
     }
-    
     message.style.color = "green";
     message.textContent = "Registration successful!";
     }
